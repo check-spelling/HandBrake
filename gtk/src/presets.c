@@ -471,7 +471,7 @@ ghb_preset_to_settings(GhbValue *settings, GhbValue *preset)
 }
 
 // Initialization order of some widgets matter because the value of
-// these widgets are used to establich limits on the values that
+// these widgets are used to establish limits on the values that
 // other widgets are allowed to take.
 //
 // So make sure these get initialized first.
@@ -508,7 +508,7 @@ ghb_settings_to_ui(signal_user_data_t *ud, GhbValue *dict)
     }
 
     iter = ghb_dict_iter_init(tmp);
-    // middle (void*) cast prevents gcc warning "defreferencing type-punned
+    // middle (void*) cast prevents gcc warning "dereferencing type-punned
     // pointer will break strict-aliasing rules"
     while (ghb_dict_iter_next(tmp, &iter, &key, &gval))
     {
@@ -1906,7 +1906,7 @@ ghb_presets_load(signal_user_data_t *ud)
     {
         if (presets_add_config_file("presets") < 0)
         {
-            ghb_log("Failed to read presets file, initailizing new presets...");
+            ghb_log("Failed to read presets file, initializing new presets...");
             hb_presets_builtin_update();
             store_presets();
         }

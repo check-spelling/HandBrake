@@ -301,7 +301,7 @@ queue_update_summary(GhbValue * queueDict, signal_user_data_t *ud)
     gtk_label_set_text(GTK_LABEL(widget), text);
     g_free(text);
 
-    // Dimenstions
+    // Dimensions
     double display_width;
     int    width, height, display_height, par_width, par_height;
     int    crop[4];
@@ -2922,7 +2922,7 @@ queue_add_all_action_cb(GSimpleAction *action, GVariant *param,
 
     // Pop up the title multiple selections dialog
     GtkResponseType response;
-    GtkWidget *dialog = GHB_WIDGET(ud->builder, "titla_add_multiple_dialog");
+    GtkWidget *dialog = GHB_WIDGET(ud->builder, "title_add_multiple_dialog");
     response = gtk_dialog_run(GTK_DIALOG(dialog));
     gtk_widget_hide(dialog);
     if (response == GTK_RESPONSE_OK)
